@@ -1,0 +1,14 @@
+.addform{
+    
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    
+}
+.createform{
+    background-image: url('../../images/dark-cloth-with-plate-waffles.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

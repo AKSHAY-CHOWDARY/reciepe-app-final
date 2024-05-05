@@ -1,0 +1,10 @@
+.nav{
+    background-color: black;
+}
+
+.text{
+    color: white !important;
+}
+.test:hover{
+    color: orange !important;
+}

@@ -1,0 +1,112 @@
+### REGISTER
+POST http://localhost:6000/user-api/user
+Content-Type: application/json
+
+{
+    "username":"akshay",
+    "password":"akshay",
+    "email":"akshay@gmail.com"
+}
+
+### LOGIN
+POST http://localhost:6000/user-api/login
+Content-Type: application/json
+
+{
+    "username":"akshay",
+    "password":"akshay"           
+}
+
+### RECIEPES REQUEST
+GET http://localhost:2000/user-api/reciepes
+
+### POST RECIEPE
+POST http://localhost:2000/user-api/new-reciepe
+Content-Type: application/json
+
+{
+    "reciepeId":"{{$timestamp}}",
+    "title":"Sweet and Sour Chicken",
+    "cuisine":"CHINESE",
+    "content":"Cook spinach and puree it. Add paneer cubes to the spinach gravy and simmer. Serve hot with roti or rice.",
+    "Time":"1h",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "username":"CHEF",
+    "image":"https://i.ytimg.com/vi/B-iJYMQhxeM/maxresdefault.jpg",
+    "comments":[],
+    "ingredients": ["Spinach", "Paneer", "Onions", "Tomatoes", "Spices"],
+    "likes":[],
+    "status":true
+}
+
+### add comments
+POST http://localhost:6000/user-api/comments/1711078980
+Content-Type: application/json
+
+{
+    "username":"keerthika",
+    "comment":"wow!",
+    "rating":5
+}
+
+### EDIT OWN RECIEPES
+PUT http://localhost:6000/user-api/reciepe/1711044139
+Content-Type: application/json
+
+{
+    "reciepeId":"1711044139",
+    "title":"NEW NEW PIZZA",
+    "cuisine":"ITALIAN",
+    "content":"............",
+    "Time":"2h",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "username":"akshay",
+    "comments":[],
+    "ingredients":[],
+    "likes":[],
+    "status":true
+}
+
+###  LIKE RECIEPE 
+POST http://localhost:2000/user-api/like/1711123667
+Content-Type: application/json
+
+{
+    "username":"sanjana"
+}
+
+### UNLIKE RECIEPE
+POST http://localhost:2000/user-api/unlike/1711123667
+Content-Type: application/json
+
+{
+    "username":"akshay"
+}
+
+### SAVED RECIEPES OF A USER
+GET http://localhost:6000/user-api/fav-reciepes/preethi
+
+
+### GET RECIEPE BY CUISINE
+GET http://localhost:2000/user-api/reciepe-by-cuisine/INDIAN
+
+###
+PUT http://localhost:2000/user-api/reciepe-del/1711113444
+Content-Type: application/json
+
+{
+     
+      "_id": "65fd338665b56a21f393773a",
+      "reciepeId": "1711113444",
+      "title": "BIRYANI",
+      "cuisine": "INDIAN",
+      "content": "............",
+      "Time": "2h",
+      "dateOfCreation": "2024-03-22T07:30:14.517Z",
+      "username": "keerthika",
+      "comments": [],
+      "ingredients": [],
+      "likes": [],
+      "status": true
+    
+}
